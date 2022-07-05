@@ -1,0 +1,12 @@
+.home__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: var(--bounce-animation) 1s ease-in 0s infinite alternate-reverse;
+}
+
+.btn_position{
+    position: fixed;
+    bottom: 28%;
+}

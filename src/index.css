@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+:root{
+  --header-height : 12vh;
+  --footer-height: 10vh;
+  --game-backGround: #213040;
+  --bounce-animation : fontSizeZoom;
+  --bounce-animation-medium : fontSizeZoomMedium;
+  --bounce-animation-small : fontSizeZoomSmall;
+}
+
+@keyframes fontSizeZoom {
+  0%{
+      font-size: large;
+  }
+  100%{
+      font-size: xx-large;
+  }
+}
+
+@keyframes fontSizeZoomMedium {
+  0%{
+      font-size: large;
+  }
+  100%{
+      font-size: x-large;
+  }
+}
+
+@keyframes fontSizeZoomSmall {
+  0%{
+      font-size: medium;
+  }
+  100%{
+      font-size: xx-small;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: cursive,'Odibee Sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

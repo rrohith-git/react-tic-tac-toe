@@ -1,0 +1,142 @@
+.row-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative;
+    top: -5rem; */
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    /* position: relative; */
+}
+
+.btn-first-row {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(256, 256, 256, -0.1);
+    border: 5px solid #7e4b8b;
+    margin: 0.2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btn-second-row {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(256, 256, 256, -0.1);
+    border: 5px solid #7e4b8b;
+    margin: 0.2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btn-third-row {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(256, 256, 256, -0.1);
+    border: 5px solid #7e4b8b;
+    margin: 0.2rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.border-right {
+    border-right: none;
+}
+
+.border-left {
+    border-left: none;
+}
+
+.border-top {
+    border-top: none;
+}
+
+.border-bottom {
+    border-bottom: none;
+}
+
+.player-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15rem;
+    font-size: 1rem;
+}
+
+.player-display.curr {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width:500px) and (max-width:800px) {
+
+    .btn-first-row, .btn-second-row, .btn-third-row  {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .player-display {
+        gap: 3rem;
+    }
+
+    .border-right {
+        border-right: none;
+    }
+    
+    .border-left {
+        border-left: none;
+    }
+    
+    .border-top {
+        border-top: none;
+    }
+    
+    .border-bottom {
+        border-bottom: none;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .game-wrapper {
+        gap: 4rem;
+    }
+    .btn-first-row, .btn-second-row, .btn-third-row  {
+        width: 3rem;
+        height: 3rem;
+        border: 3px solid #7e4b8b;
+        font-size: 1.5rem;
+    }
+
+    .player-display {
+        gap: 3rem;
+    }
+
+    .player-display.curr {
+        font-size: 1.2rem;
+    }
+
+    .border-right {
+        border-right: none;
+    }
+    
+    .border-left {
+        border-left: none;
+    }
+    
+    .border-top {
+        border-top: none;
+    }
+    
+    .border-bottom {
+        border-bottom: none;
+    }
+    
+}

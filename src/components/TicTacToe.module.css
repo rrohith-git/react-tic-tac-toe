@@ -1,0 +1,50 @@
+.main_container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--game-backGround);
+    color: white;
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.game__container {
+    border-radius: inherit;
+    background-color: #36d7b5;
+    /* background-color: #1e8fe6; */
+    width: 40vw;
+    height: 50vh;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(80vh - var(--header-height) - var(--footer-height));
+}
+
+@media screen and (max-width:1000px) {
+    .container {
+        width: 80vw;
+        height: 75vh;
+    }
+    .game__container {
+        width: 70vw;
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container {
+        width: 80vw;
+        height: 80vh;
+    }
+    .game__container {
+        width: 70vw;
+    }
+}
