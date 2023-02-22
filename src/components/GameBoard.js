@@ -1,12 +1,17 @@
-import { useCallback, useContext, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { calculateWinner, cpuIndex } from '../utlis';
 import styles from './GameBoard.module.css';
 import GameContext, { MODES, PLAYER, STEPS } from './store/game-context';
 
+GameBoard.propTypes = {
+    setWinner: PropTypes.func.isRequired
+};
+
 const GameBoard = ({ setWinner }) => {
 
     const gameCtx = useContext(GameContext);
-    const singlePlayerMode = gameCtx.modes[MODES.SINGLE_PLAYER]
+    const singlePlayerMode = gameCtx.modes[MODES.SINGLE_PLAYER];
     const [square, setSquare] = useState(Array(9).fill(null));
     const [is1pNext, setIs1pNext] = useState(true);
 
@@ -32,9 +37,9 @@ const GameBoard = ({ setWinner }) => {
         if (!is1pNext && singlePlayerMode && !square.every(cell => cell !== null)) {
             const cpuId = cpuIndex(square);
             if (cpuId) {
-                setTimeout(() => onUpdateSquare(cpuId), 500)
+                setTimeout(() => onUpdateSquare(cpuId), 500);
             }
-        };
+        }
     }, [square, gameCtx, setWinner, is1pNext, singlePlayerMode, onUpdateSquare]);
 
 
@@ -62,7 +67,7 @@ const GameBoard = ({ setWinner }) => {
                 <span className={`${styles['player-display']} ${!is1pNext ? styles.curr : ''}`}>{gameCtx.modes[PLAYER.MULTI] ? 'Player 2 ' + String.fromCodePoint(gameCtx.avatarSelection[PLAYER.MULTI]) : 'CPU ' + String.fromCodePoint(gameCtx.avatarSelection[PLAYER.CPU])}</span>
             </div>
         </div>
-    )
+    );
 };
 
 export default GameBoard;

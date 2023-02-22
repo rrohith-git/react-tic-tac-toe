@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styles from './TicTacToe.module.css';
 import Header from './Header';
 import Footer from './Footer';
@@ -23,13 +23,13 @@ const TicTacToe = () => {
                     {steps.showhomeScreen.value && <Home />}
                     {steps.showSelectModeScreen.value && <SelectMode />}
                     {steps.showChooseAvatarScreen.value && <AvatarSelection />}
-                    {steps.showGameboardScreen.value && <GameBoard setWinner={(avatar, isWin) => { winner = avatar; isWinner = isWin }} />}
+                    {steps.showGameboardScreen.value && <GameBoard setWinner={(avatar, isWin) => { winner = avatar; isWinner = isWin; }} />}
                     {steps.showWinnerScreen.value && <Winner avatar={winner} isWinner={isWinner} />}
                 </div>
                 <Footer />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default TicTacToe
+export default TicTacToe;

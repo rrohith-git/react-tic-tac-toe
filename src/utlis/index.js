@@ -17,7 +17,7 @@ export const calculateWinner = (square) => {
         }
     }
     return null;
-}
+};
 
 export const cpuIndex = (square) => {
     for (let i = 0; i < lines.length; i++) {
@@ -34,4 +34,4 @@ export const cpuIndex = (square) => {
         }
     }
     return null;
-}
+};

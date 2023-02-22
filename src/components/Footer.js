@@ -1,4 +1,5 @@
-import styles from './Footer.module.css'
+import React from 'react';
+import styles from './Footer.module.css';
 
 const Footer = () => {
     return (
@@ -6,6 +7,6 @@ const Footer = () => {
             <h5>Copyright &copy; 2022 Tic-Tac-Toe. All Rights Reserved</h5>
         </footer>
     );
-}
+};
 
 export default Footer; 

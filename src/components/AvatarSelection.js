@@ -1,11 +1,11 @@
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from './AvatarSelection.module.css';
 import GameContext, { MODES, PLAYER, STEPS } from './store/game-context';
 import Button from './ui/Button';
 
-const AVATARS = ['0x1F47B', '0x1F608', '0x1F929', '0x1F60D', '0x1F351', '0x1F680', '0x1f4a9', '0129409', '0x1F9A0', '0x1F496']
+const AVATARS = ['0x1F47B', '0x1F608', '0x1F929', '0x1F60D', '0x1F351', '0x1F680', '0x1f4a9', '0129409', '0x1F9A0', '0x1F496'];
 
-const AvatarSelection = (props) => {
+const AvatarSelection = () => {
 
     const [avatars, setAvatars] = useState(AVATARS);
     const [selectedAvatar, setSelectedAvatar] = useState('');

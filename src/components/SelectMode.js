@@ -1,16 +1,16 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import styles from './SelectMode.module.css';
 import GameContext, { STEPS } from './store/game-context';
 import Button from './ui/Button';
 
-const SelectMode = (props) => {
+const SelectMode = () => {
 
     const gameCtx = useContext(GameContext);
 
     const onClickHandler = (event) => {
-        const btnId = event.target.id
-        gameCtx.setModes(btnId)
-        gameCtx.switchToNextStep(STEPS.AVATAR)
+        const btnId = event.target.id;
+        gameCtx.setModes(btnId);
+        gameCtx.switchToNextStep(STEPS.AVATAR);
     };
 
     return (
@@ -21,7 +21,7 @@ const SelectMode = (props) => {
                 <Button id='2p' type='button' name='Multi Player' onClick={onClickHandler} />
             </div>
         </div>
-    )
+    );
 };
 
 export default SelectMode;
