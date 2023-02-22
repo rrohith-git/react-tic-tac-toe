@@ -23,7 +23,7 @@ const TicTacToe = () => {
                     {steps.showhomeScreen.value && <Home />}
                     {steps.showSelectModeScreen.value && <SelectMode />}
                     {steps.showChooseAvatarScreen.value && <AvatarSelection />}
-                    {steps.showGameboardScreen.value && <GameBoard setWinner={(avatar, isWin) =>{winner = avatar; isWinner = isWin}} />}
+                    {steps.showGameboardScreen.value && <GameBoard setWinner={(avatar, isWin) => { winner = avatar; isWinner = isWin }} />}
                     {steps.showWinnerScreen.value && <Winner avatar={winner} isWinner={isWinner} />}
                 </div>
                 <Footer />
